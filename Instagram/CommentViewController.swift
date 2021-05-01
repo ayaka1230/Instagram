@@ -24,7 +24,6 @@ class CommentViewController: UIViewController {
         
         let date = Date()
         // comments を更新する
-        // 表示名を取得してTextFieldに設定する
         let user = Auth.auth().currentUser
         if let user = user {
             let newComment = [
