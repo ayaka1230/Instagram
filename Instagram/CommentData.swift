@@ -9,8 +9,8 @@ import UIKit
 import Firebase
 
 class CommentData: NSObject {
-    // コメント投稿者のID
-    var userId: String?
+    // コメント投稿者の表示名
+    var displayName: String?
     
     // コメントの内容
     var content: String?
@@ -19,7 +19,7 @@ class CommentData: NSObject {
     var date: Date?
     
     init(comment: NSDictionary) {
-        self.userId = comment["userId"] as? String
+        self.displayName = comment["displayName"] as? String
         self.content = comment["content"] as? String
         let timestamp = comment["date"] as? Timestamp
         self.date = timestamp?.dateValue()

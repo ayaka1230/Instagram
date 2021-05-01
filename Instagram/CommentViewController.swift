@@ -17,9 +17,11 @@ class CommentViewController: UIViewController {
     @IBAction func handleCommentButton(_ sender: Any) {
         let date = Date()
         // comments を更新する
-        if let myid = Auth.auth().currentUser?.uid {
+        // 表示名を取得してTextFieldに設定する
+        let user = Auth.auth().currentUser
+        if let user = user {
             let newComment = [
-                "userId": myid,
+                "displayName": user.displayName ?? "名無しさん",
                 "content": self.contentTextView.text!,
                 "date": date,
             ] as [String: Any]
