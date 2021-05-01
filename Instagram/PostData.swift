@@ -21,6 +21,8 @@ class PostData: NSObject {
     var likes: [String] = []
     // 自分がいいねしたかどうかのフラグ
     var isLiked: Bool = false
+    // コメントの配列
+    var comments: [CommentData] = []
     
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
@@ -44,6 +46,10 @@ class PostData: NSObject {
                 // myid があれば、いいねを押していると認識する
                 self.isLiked = true
             }
+        }
+        
+        if let comments = postDic["comments"] as? [CommentData] {
+            self.comments = comments
         }
     }
 }
