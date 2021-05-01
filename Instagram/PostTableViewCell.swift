@@ -24,6 +24,8 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var captionLabel: UILabel!
     
+    @IBOutlet weak var commentListLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -70,6 +72,18 @@ class PostTableViewCell: UITableViewCell {
         // コメント数の表示
         let commentNumber = postData.comments.count
         commentLabel.text = "\(commentNumber)"
+        
+        // コメントの表示
+        var commentListText = ""
+        if postData.comments.count > 0 {
+            let comments = postData.comments.sorted(by: {
+                $0.date!.compare($1.date!) == .orderedAscending
+            })
+            comments.forEach {
+                commentListText = "\(commentListText)\($0.displayName!): \($0.content!)\n"
+            }
+        }
+        commentListLabel.text = commentListText
     }
     
 }

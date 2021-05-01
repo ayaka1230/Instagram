@@ -321,14 +321,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-bA-LLI">
-                                <rect key="frame" x="57" y="228" width="300" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-bA-LLI">
+                                <rect key="frame" x="57" y="229" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="crZ-SW-sUv"/>
                                 </constraints>
                                 <state key="normal" title="コメントする" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="handleCommentButton:" destination="WVa-Pf-QaT" eventType="touchUpInside" id="HnO-4R-mch"/>
+                                    <action selector="handleCommentButton:" destination="WVa-Pf-QaT" eventType="touchUpInside" id="86k-Ri-qyG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-xJ-W4J">

@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class CommentViewController: UIViewController {
     
@@ -15,6 +16,12 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     
     @IBAction func handleCommentButton(_ sender: Any) {
+        // コメントが入力されていない時は HUD を出して何もしない
+        if contentTextView.text.count == 0 {
+            SVProgressHUD.showError(withStatus: "コメントを入力して下さい")
+            return
+        }
+        
         let date = Date()
         // comments を更新する
         // 表示名を取得してTextFieldに設定する

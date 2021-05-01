@@ -46,8 +46,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gat-S9-bLL">
-                        <rect key="frame" x="26" y="390" width="268" height="79"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gat-S9-bLL">
+                        <rect key="frame" x="26" y="390" width="268" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -69,6 +69,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFb-50-Cj5">
+                        <rect key="frame" x="26" y="429" width="268" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Nj9-D1-c29" firstAttribute="leading" secondItem="qDm-ca-7TA" secondAttribute="trailing" constant="10" id="06u-pR-rHn"/>
@@ -76,20 +82,23 @@
                     <constraint firstItem="Fnn-e1-Lkn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4cC-1K-rNI"/>
                     <constraint firstItem="qDm-ca-7TA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="6HV-zk-1Oy"/>
                     <constraint firstItem="VkR-C3-MrH" firstAttribute="centerY" secondItem="qDm-ca-7TA" secondAttribute="centerY" id="8JJ-bo-khq"/>
+                    <constraint firstItem="SFb-50-Cj5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ELY-Js-ETM"/>
                     <constraint firstItem="1sa-X9-v5t" firstAttribute="leading" secondItem="VkR-C3-MrH" secondAttribute="trailing" constant="10" id="HnH-zA-0MF"/>
                     <constraint firstItem="Gat-S9-bLL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Kps-DK-DbQ"/>
                     <constraint firstItem="Gat-S9-bLL" firstAttribute="top" secondItem="qDm-ca-7TA" secondAttribute="bottom" constant="10" id="Ljn-b2-gcs"/>
                     <constraint firstItem="ccc-5l-ipj" firstAttribute="leading" secondItem="1sa-X9-v5t" secondAttribute="trailing" constant="10" id="P16-24-CWk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ccc-5l-ipj" secondAttribute="trailing" constant="10" id="PB4-o0-Tz9"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Gat-S9-bLL" secondAttribute="trailing" constant="10" id="UPS-ir-fQv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SFb-50-Cj5" secondAttribute="bottom" constant="10" id="Xv3-My-wHq"/>
                     <constraint firstItem="1sa-X9-v5t" firstAttribute="centerY" secondItem="qDm-ca-7TA" secondAttribute="centerY" id="aY6-jP-I1u"/>
                     <constraint firstItem="VkR-C3-MrH" firstAttribute="leading" secondItem="Nj9-D1-c29" secondAttribute="trailing" constant="10" id="bOS-cW-wVC"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Gat-S9-bLL" secondAttribute="bottom" constant="10" id="hA6-8X-pPu"/>
                     <constraint firstItem="Fnn-e1-Lkn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="iSp-UQ-Lwa"/>
                     <constraint firstAttribute="trailing" secondItem="Fnn-e1-Lkn" secondAttribute="trailing" id="keJ-oa-qbb"/>
+                    <constraint firstItem="SFb-50-Cj5" firstAttribute="top" secondItem="Gat-S9-bLL" secondAttribute="bottom" constant="10" id="uaR-Sf-PQH"/>
                     <constraint firstItem="1sa-X9-v5t" firstAttribute="leading" secondItem="VkR-C3-MrH" secondAttribute="trailing" constant="10" id="v2X-ec-LJa"/>
                     <constraint firstItem="qDm-ca-7TA" firstAttribute="top" secondItem="Fnn-e1-Lkn" secondAttribute="bottom" constant="10" id="vP0-lg-w43"/>
                     <constraint firstItem="Nj9-D1-c29" firstAttribute="centerY" secondItem="qDm-ca-7TA" secondAttribute="centerY" id="vzQ-I2-pqz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SFb-50-Cj5" secondAttribute="trailing" constant="10" id="wJA-R9-zsc"/>
                     <constraint firstItem="ccc-5l-ipj" firstAttribute="centerY" secondItem="qDm-ca-7TA" secondAttribute="centerY" id="wrA-vf-Jgc"/>
                 </constraints>
             </tableViewCellContentView>
@@ -97,7 +106,8 @@
             <connections>
                 <outlet property="captionLabel" destination="Gat-S9-bLL" id="Ufh-mB-dZv"/>
                 <outlet property="commentButton" destination="VkR-C3-MrH" id="apD-9U-zRP"/>
-                <outlet property="commentLabel" destination="1sa-X9-v5t" id="wh2-G3-Cbb"/>
+                <outlet property="commentLabel" destination="1sa-X9-v5t" id="s9a-zN-c0B"/>
+                <outlet property="commentListLabel" destination="SFb-50-Cj5" id="Mqa-wf-6RY"/>
                 <outlet property="dateLabel" destination="ccc-5l-ipj" id="m3T-dI-pep"/>
                 <outlet property="likeButton" destination="qDm-ca-7TA" id="yYm-H8-I6m"/>
                 <outlet property="likeLabel" destination="Nj9-D1-c29" id="Xy0-hr-NcQ"/>
