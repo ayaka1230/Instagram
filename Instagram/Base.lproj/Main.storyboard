@@ -191,7 +191,7 @@
         <!--ホーム-->
         <scene sceneID="NnR-p3-kSm">
             <objects>
-                <viewController storyboardIdentifier="Home" id="X5d-Nh-GiP" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="X5d-Nh-GiP" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Er6-1Z-qrk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

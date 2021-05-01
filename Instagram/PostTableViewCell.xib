@@ -71,6 +71,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="captionLabel" destination="Gat-S9-bLL" id="Ufh-mB-dZv"/>
                 <outlet property="dateLabel" destination="ccc-5l-ipj" id="m3T-dI-pep"/>
                 <outlet property="likeButton" destination="qDm-ca-7TA" id="yYm-H8-I6m"/>
                 <outlet property="likeLabel" destination="Nj9-D1-c29" id="Xy0-hr-NcQ"/>
