@@ -10,7 +10,7 @@ import Firebase
 
 class CommentViewController: UIViewController {
     
-    var postData: PostData!
+    var postDataId: String!
     
     @IBOutlet weak var contentTextView: UITextView!
     
@@ -27,7 +27,7 @@ class CommentViewController: UIViewController {
             let updateValue: FieldValue = FieldValue.arrayUnion([newComment])
 
             // comments に更新データを書き込む
-            let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
+            let postRef = Firestore.firestore().collection(Const.PostPath).document(postDataId)
             postRef.updateData(["comments": updateValue])
             
             // 画面を閉じる

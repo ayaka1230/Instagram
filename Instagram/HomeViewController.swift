@@ -119,7 +119,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // commentViewController にモーダル画面遷移する
         let commentViewController = storyboard!.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
-        commentViewController.postData = postData
+        commentViewController.postDataId = postData.id
         present(commentViewController, animated: true)
     }
     /*
