@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
@@ -19,6 +20,17 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.tabBar.barTintColor = UIColor(red: 0.96, green: 0.91, blue: 0.87, alpha: 1)
         // UITabBarControllerDelegate プロトコルのメソッドをこのクラスで処理する
         self.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // currentUser が nil ならログインしていない
+        if Auth.auth().currentUser == nil {
+            // ログインしていない時の処理
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+            self.present(loginViewController!, animated: true, completion: nil)
+        }
     }
     
     // タブバーのアイコンがタップされた時に呼ばれる delegate メソッドを処理する
