@@ -48,8 +48,13 @@ class PostData: NSObject {
             }
         }
         
-        if let comments = postDic["comments"] as? [CommentData] {
-            self.comments = comments
+        if postDic["comments"] != nil {
+            let comments = postDic["comments"] as? [NSDictionary]
+            let initComments = comments?.map {
+                return CommentData(comment: $0)
+            }
+            self.comments = initComments!
         }
+        
     }
 }

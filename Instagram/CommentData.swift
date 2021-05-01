@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CommentData: NSObject {
     // コメント投稿者のID
@@ -17,6 +18,10 @@ class CommentData: NSObject {
     // コメントが投稿された日時
     var date: Date?
     
-    override init() {
+    init(comment: NSDictionary) {
+        self.userId = comment["userId"] as? String
+        self.content = comment["content"] as? String
+        let timestamp = comment["date"] as? Timestamp
+        self.date = timestamp?.dateValue()
     }
 }
