@@ -76,10 +76,10 @@ class PostTableViewCell: UITableViewCell {
         // コメントの表示
         var commentListText = ""
         if postData.comments.count > 0 {
-            let comments = postData.comments.sorted(by: {
+            let sortedComments = postData.comments.sorted(by: {
                 $0.date!.compare($1.date!) == .orderedAscending
             })
-            comments.forEach {
+            sortedComments.forEach {
                 commentListText = "\(commentListText)\($0.displayName!): \($0.content!)\n"
             }
         }
