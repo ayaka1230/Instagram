@@ -66,6 +66,10 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
         }
+        
+        // コメント数の表示
+        let commentNumber = postData.comments.count
+        commentLabel.text = "\(commentNumber)"
     }
     
 }

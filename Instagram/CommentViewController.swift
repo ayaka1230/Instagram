@@ -15,12 +15,13 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     
     @IBAction func handleCommentButton(_ sender: Any) {
+        let date = Date()
         // comments を更新する
         if let myid = Auth.auth().currentUser?.uid {
             let newComment = [
                 "userId": myid,
                 "content": self.contentTextView.text!,
-                "date": FieldValue.serverTimestamp(),
+                "date": date,
             ] as [String: Any]
             // 更新データを作成する
             let updateValue: FieldValue = FieldValue.arrayUnion([newComment])

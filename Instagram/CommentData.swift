@@ -15,7 +15,7 @@ class CommentData: NSObject {
     var content: String?
     
     // コメントが投稿された日時
-    // var date: Date?
+    var date: Date?
     
     override init() {
     }
