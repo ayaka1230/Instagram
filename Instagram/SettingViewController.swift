@@ -57,15 +57,20 @@ class SettingViewController: UIViewController {
         tabBarController?.selectedIndex = 0
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        // Do any additional setup after loading the view.
-        // 表示名を取得して TextField に設定する
+        // 表示名を取得してTextFieldに設定する
         let user = Auth.auth().currentUser
         if let user = user {
             displayNameTextField.text = user.displayName
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.å
     }
     
 
